@@ -1,0 +1,18 @@
+{
+  "tool_card_version": "0.1",
+  "tool": {
+    "name": "delete-document",
+    "version": "1.0.0",
+    "description": "Permanently remove an indexed document and its embeddings."
+  },
+  "safety": {
+    "side_effect_class": "destructive",
+    "reversible": false,
+    "rate_limited": true,
+    "pii_exposure": "medium",
+    "secrets_exposure": "none",
+    "human_approval_required": true
+  },
+  "performance": { "p50_latency_ms": 90, "p95_latency_ms": 400 },
+  "cost": { "per_call_cost_usd": 0.0001 }
+}

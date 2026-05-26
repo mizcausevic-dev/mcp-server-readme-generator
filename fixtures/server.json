@@ -1,0 +1,8 @@
+{
+  "name": "research-mcp",
+  "description": "Research workbench MCP server — vector search, summarization, document lifecycle.",
+  "version": "1.4.0",
+  "license": "AGPL-3.0-or-later",
+  "repository": { "url": "https://github.com/example/research-mcp" },
+  "homepage": "https://example.com/research-mcp"
+}

@@ -1,0 +1,49 @@
+{
+  "tools": [
+    {
+      "name": "search-vectorstore",
+      "description": "Semantic search over the indexed corpus.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Free-text query" },
+          "top_k": { "type": "integer", "description": "Number of results to return", "default": 10 },
+          "filter": {
+            "type": "object",
+            "properties": {
+              "namespace": { "type": "string", "enum": ["public", "internal"] }
+            }
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "summarize",
+      "description": "Bullet summary of an arbitrary text.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": { "type": "string" },
+          "max_bullets": { "type": "integer", "default": 5 }
+        },
+        "required": ["text"]
+      }
+    },
+    {
+      "name": "delete-document",
+      "description": "Permanently remove an indexed document and its embeddings.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "doc_id": { "type": "string" }
+        },
+        "required": ["doc_id"]
+      }
+    },
+    {
+      "name": "ping",
+      "inputSchema": { "type": "object", "properties": {} }
+    }
+  ]
+}

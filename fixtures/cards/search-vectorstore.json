@@ -1,0 +1,17 @@
+{
+  "tool_card_version": "0.1",
+  "tool": {
+    "name": "search-vectorstore",
+    "version": "1.0.0",
+    "description": "Semantic search over the indexed corpus."
+  },
+  "safety": {
+    "side_effect_class": "read",
+    "reversible": true,
+    "rate_limited": false,
+    "pii_exposure": "low",
+    "secrets_exposure": "none",
+    "human_approval_required": false
+  },
+  "performance": { "p50_latency_ms": 120, "p95_latency_ms": 480 }
+}
